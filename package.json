@@ -1,17 +1,40 @@
 {
-    "buildNpmdoc":"grunt-browserify",
+    "author": "kai zhu <kaizhu256@gmail.com>",
+    "buildNpmdoc": "grunt-browserify",
+    "description": "api documentation for [grunt-browserify (v5.0.0)](https://github.com/jmreidy/grunt-browserify) [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-browserify.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-browserify) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-browserify.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-browserify)",
     "devDependencies": {
-        "grunt-browserify": "*",
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
+        "grunt-browserify": "*",
         "utility2": "kaizhu256/node-utility2#alpha"
     },
-    "name":"npmdoc-grunt-browserify",
+    "engines": {
+        "node": ">=4.0"
+    },
+    "homepage": "https://github.com/npmdoc/node-npmdoc-grunt-browserify",
+    "keywords": [
+        "documentation",
+        "grunt-browserify"
+    ],
+    "license": "MIT",
+    "main": "lib.npmdoc_grunt_browserify.js",
+    "name": "npmdoc-grunt-browserify",
+    "nameAlias": "npmdoc_grunt_browserify",
+    "nameOriginal": "npmdoc-grunt-browserify",
+    "os": [
+        "darwin",
+        "linux"
+    ],
     "repository": {
         "type": "git",
         "url": "https://github.com/npmdoc/node-npmdoc-grunt-browserify.git"
     },
     "scripts": {
-        "build-ci": "utility2 shReadmeTest build_ci.sh"
+        "build-ci": "utility2 shReadmeTest build_ci.sh",
+        "env": "env",
+        "heroku-postbuild": "(set -e; npm install \"kaizhu256/node-utility2#alpha\"; utility2 shDeployHeroku)",
+        "postinstall": "if [ -f npm_scripts.sh ]; then ./npm_scripts.sh postinstall; fi",
+        "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
+        "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
     "version": "0.0.1"
 }
