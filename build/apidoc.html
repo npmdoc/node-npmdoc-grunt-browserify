@@ -1,0 +1,458 @@
+<div class="apidocDiv">
+<style>
+/*csslint
+*/
+.apidocDiv {
+    background: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.apidocDiv a[href] {
+    color: #33f;
+    font-weight: bold;
+    text-decoration: none;
+}
+.apidocDiv a[href]:hover {
+    text-decoration: underline;
+}
+.apidocCodeCommentSpan {
+    background: #bbf;
+    color: #000;
+    display: block;
+}
+.apidocCodeKeywordSpan {
+    color: #d00;
+    font-weight: bold;
+}
+.apidocCodePre {
+    background: #eef;
+    border: 1px solid;
+    color: #777;
+    padding: 5px;
+    white-space: pre-wrap;
+}
+.apidocFooterDiv {
+    margin-top: 20px;
+    text-align: center;
+}
+.apidocModuleLi {
+    margin-top: 10px;
+}
+.apidocSectionDiv {
+    border-top: 1px solid;
+    margin-top: 20px;
+}
+.apidocSignatureSpan {
+    color: #777;
+    font-weight: bold;
+}
+</style>
+<h1>api documentation for
+    <a
+
+        href="https://github.com/jmreidy/grunt-browserify"
+
+    >grunt-browserify (v5.0.0)</a>
+</h1>
+<h4>Grunt task for node-browserify</h4>
+<div class="apidocSectionDiv"><a
+    href="#apidoc.tableOfContents"
+    id="apidoc.tableOfContents"
+><h1>table of contents</h1></a><ol>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-browserify">module grunt-browserify</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-browserify.runTask">
+            function <span class="apidocSignatureSpan">grunt-browserify.</span>runTask
+            <span class="apidocSignatureSpan">(grunt, options, file, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-browserify.runner">
+            function <span class="apidocSignatureSpan">grunt-browserify.</span>runner
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <span class="apidocSignatureSpan">object <span class="apidocSignatureSpan">grunt-browserify.</span>runner.prototype</span>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-browserify.runner">module grunt-browserify.runner</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-browserify.runner.runner">
+            function <span class="apidocSignatureSpan">grunt-browserify.</span>runner
+            <span class="apidocSignatureSpan">(options)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+    <li class="apidocModuleLi"><a href="#apidoc.module.grunt-browserify.runner.prototype">module grunt-browserify.runner.prototype</a><ol>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-browserify.runner.prototype.createDestDir">
+            function <span class="apidocSignatureSpan">grunt-browserify.runner.prototype.</span>createDestDir
+            <span class="apidocSignatureSpan">(destination)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-browserify.runner.prototype.keepAliveFn">
+            function <span class="apidocSignatureSpan">grunt-browserify.runner.prototype.</span>keepAliveFn
+            <span class="apidocSignatureSpan">(destination)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-browserify.runner.prototype.onBundleComplete">
+            function <span class="apidocSignatureSpan">grunt-browserify.runner.prototype.</span>onBundleComplete
+            <span class="apidocSignatureSpan">(destination, options, next)</span>
+            </a>
+
+        </li>
+
+        <li>
+
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-browserify.runner.prototype.run">
+            function <span class="apidocSignatureSpan">grunt-browserify.runner.prototype.</span>run
+            <span class="apidocSignatureSpan">(files, destination, options, next)</span>
+            </a>
+
+        </li>
+
+    </ol></li>
+
+</ol></div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-browserify" id="apidoc.module.grunt-browserify">module grunt-browserify</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-browserify.runTask" id="apidoc.element.grunt-browserify.runTask">
+        function <span class="apidocSignatureSpan">grunt-browserify.</span>runTask
+        <span class="apidocSignatureSpan">(grunt, options, file, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">runTask = function (grunt, options, file, next) {
+  var runner = new Runner({
+    writer: grunt.file,
+    logger: grunt,
+    browserify: browserify,
+    watchify: watchify
+  });
+  var files = grunt.file.expand({filter: &#x27;isFile&#x27;}, file.src).map(function (f) {
+    return path.resolve(f);
+  });
+  runner.run(files, file.dest, options, next);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-browserify.runner" id="apidoc.element.grunt-browserify.runner">
+        function <span class="apidocSignatureSpan">grunt-browserify.</span>runner
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function GruntBrowserifyRunner(options) {
+  this.browserify = options.browserify;
+  this.watchify = options.watchify;
+  this.logger = options.logger;
+  this.writer = options.writer;
+  this.firstBuild = true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-browserify.runner" id="apidoc.module.grunt-browserify.runner">module grunt-browserify.runner</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-browserify.runner.runner" id="apidoc.element.grunt-browserify.runner.runner">
+        function <span class="apidocSignatureSpan">grunt-browserify.</span>runner
+        <span class="apidocSignatureSpan">(options)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function GruntBrowserifyRunner(options) {
+  this.browserify = options.browserify;
+  this.watchify = options.watchify;
+  this.logger = options.logger;
+  this.writer = options.writer;
+  this.firstBuild = true;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocSectionDiv">
+<h1><a href="#apidoc.module.grunt-browserify.runner.prototype" id="apidoc.module.grunt-browserify.runner.prototype">module grunt-browserify.runner.prototype</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-browserify.runner.prototype.createDestDir" id="apidoc.element.grunt-browserify.runner.prototype.createDestDir">
+        function <span class="apidocSignatureSpan">grunt-browserify.runner.prototype.</span>createDestDir
+        <span class="apidocSignatureSpan">(destination)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">createDestDir = function (destination) {
+  var destPath = path.dirname(path.resolve(destination));
+  if (!this.writer.exists(destPath)) {
+    this.writer.mkdir(destPath);
+  }
+  return destPath;
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+if (options.plugin) {
+  _.forEach(options.plugin, function (plugin) {
+    b.plugin(plugin);
+  });
+}
+
+
+var destPath = this.<span class="apidocCodeKeywordSpan">createDestDir</span>(destination);
+var keepAlive = this.keepAliveFn.bind(this, destination);
+var done = options.keepAlive? keepAlive : next;
+var bundleComplete = this.onBundleComplete(destination, options, done);
+
+if (options.watch) {
+  var bundleUpdate = this.onBundleComplete(destination, options, keepAlive);
+  b.on(&#x27;update&#x27;, function (ids) {
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-browserify.runner.prototype.keepAliveFn" id="apidoc.element.grunt-browserify.runner.prototype.keepAliveFn">
+        function <span class="apidocSignatureSpan">grunt-browserify.runner.prototype.</span>keepAliveFn
+        <span class="apidocSignatureSpan">(destination)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">keepAliveFn = function (destination) {
+  //this.logger.log.ok(&#x27;Watchifying...&#x27;);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-browserify.runner.prototype.onBundleComplete" id="apidoc.element.grunt-browserify.runner.prototype.onBundleComplete">
+        function <span class="apidocSignatureSpan">grunt-browserify.runner.prototype.</span>onBundleComplete
+        <span class="apidocSignatureSpan">(destination, options, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">onBundleComplete = function (destination, options, next) {
+  var self = this;
+  return function (err, buf) {
+    if (err) {
+      self.logger.log.error(err);
+      if (self.firstBuild || !options.keepAlive) {
+        self.logger.fail.warn(&#x27;Error running grunt-browserify.&#x27;);
+      }
+    }
+    else if (buf) {
+        // prepend the banner
+        if(options.banner) {
+            buf = Buffer.concat([new Buffer(options.banner + &#x27;\n&#x27;, &#x27;utf8&#x27;), buf]);
+        }
+
+      self.logger.log.ok(&#x27;Bundle &#x27; + destination.cyan + &#x27; created. &#x27; + (options.keepAlive ? &#x27;Watchifying...&#x27; : &#x27;&#x27;));
+      self.writer.write(destination, buf);
+    }
+
+    self.firstBuild = false;
+    next();
+  };
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+  });
+}
+
+
+var destPath = this.createDestDir(destination);
+var keepAlive = this.keepAliveFn.bind(this, destination);
+var done = options.keepAlive? keepAlive : next;
+var bundleComplete = this.<span class="apidocCodeKeywordSpan">onBundleComplete</span>(destination, options, done);
+
+if (options.watch) {
+  var bundleUpdate = this.onBundleComplete(destination, options, keepAlive);
+  b.on(&#x27;update&#x27;, function (ids) {
+    ids.forEach(function (id) {
+      self.logger.log.ok(id.cyan + &#x27; changed, updating bundle.&#x27;);
+    });
+...</pre></li>
+    </ul>
+
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-browserify.runner.prototype.run" id="apidoc.element.grunt-browserify.runner.prototype.run">
+        function <span class="apidocSignatureSpan">grunt-browserify.runner.prototype.</span>run
+        <span class="apidocSignatureSpan">(files, destination, options, next)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">run = function (files, destination, options, next) {
+  var self = this;
+
+  //set constructor options and instantiate
+  var bOpts = _.cloneDeep(options.browserifyOptions) || {};
+  bOpts.entries = bOpts.entries || files;
+
+  // watchify options
+  var wOpts = options.watchifyOptions || {};
+
+  // Watchify requires specific arguments
+  if(options.watch) {
+    bOpts = _.extend({ cache: {}, packageCache: {} }, bOpts);
+  }
+
+  //determine watchify or browserify
+  var b = options.watch ? this.watchify(this.browserify(bOpts), wOpts) : this.browserify(bOpts);
+
+  b.on(&#x27;error&#x27;, function (err) {
+    self.logger.fail.warn(err);
+  });
+
+  if(options.bundleOptions) {
+    throw new Error(&#x27;bundleOptions is no longer used. Move all option in browserifyOptions.&#x27;);
+  }
+
+  if(options.alias) {
+    if(_.isPlainObject(options.alias)) {
+      for(var alias in options.alias) {
+        b.require(options.alias[alias], {expose: alias});
+      }
+    }
+    else {
+      requireFiles(b, options.alias);
+    }
+  }
+
+  if(options.require) {
+    requireFiles(b, options.require);
+  }
+
+  if (options.exclude) {
+    _.forEach(options.exclude, function (file) {
+      runOptionForGlob(b, &#x27;exclude&#x27;, file);
+    });
+  }
+
+  if (options.ignore) {
+    _.forEach(options.ignore, function (file) {
+      runOptionForGlob(b, &#x27;ignore&#x27;, file);
+    });
+  }
+
+  if (options.external) {
+    // allow externalizing of alias object
+    if(_.isPlainObject(options.external)) {
+      for(var id in options.external) {
+        if (testForGlob(id)) {
+          runOptionForGlob(b, &#x27;external&#x27;, id);
+        }
+        else {
+          b.external(id);
+        }
+      }
+    }
+    else {
+      _.forEach(options.external, function (id) {
+        //allow externalizing of require lists
+        if (id.match(&#x27;:&#x27;)) {
+          id = id.split(&#x27;:&#x27;)[1];
+        }
+
+        if (testForGlob(id)) {
+          runOptionForGlob(b, &#x27;external&#x27;, id);
+        }
+        else {
+          b.external(id);
+        }
+      });
+    }
+  }
+
+  if (options.transform) {
+    _.forEach(options.transform, function (transformer) {
+      b.transform(transformer);
+    });
+  }
+
+  if (options.plugin) {
+    _.forEach(options.plugin, function (plugin) {
+      b.plugin(plugin);
+    });
+  }
+
+
+  var destPath = this.createDestDir(destination);
+  var keepAlive = this.keepAliveFn.bind(this, destination);
+  var done = options.keepAlive? keepAlive : next;
+  var bundleComplete = this.onBundleComplete(destination, options, done);
+
+  if (options.watch) {
+    var bundleUpdate = this.onBundleComplete(destination, options, keepAlive);
+    b.on(&#x27;update&#x27;, function (ids) {
+      ids.forEach(function (id) {
+        self.logger.log.ok(id.cyan + &#x27; changed, updating bundle.&#x27;);
+      });
+      doBundle(b, options, bundleUpdate);
+    });
+  }
+
+  if (options.configure) {
+    options.configure(b);
+  }
+
+  doBundle(b, options, bundleComplete);
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
+
+</div>
+
+<div class="apidocFooterDiv">
+    [ this document was created with
+    <a href="https://github.com/kaizhu256/node-utility2" target="_blank">utility2</a>
+    ]
+</div>
+</div>
