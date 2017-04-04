@@ -3,7 +3,7 @@
 
 [![NPM](https://nodei.co/npm/grunt-browserify.png?downloads=true)](https://www.npmjs.com/package/grunt-browserify)
 
-[![apidoc](https://npmdoc.github.io/node-npmdoc-grunt-browserify/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-grunt-browserify_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-grunt-browserify/build..beta..travis-ci.org/apidoc.html)
+[![apidoc](https://npmdoc.github.io/node-npmdoc-grunt-browserify/build/screenCapture.buildNpmdoc.browser._2Fhome_2Ftravis_2Fbuild_2Fnpmdoc_2Fnode-npmdoc-grunt-browserify_2Ftmp_2Fbuild_2Fapidoc.html.png)](https://npmdoc.github.io/node-npmdoc-grunt-browserify/build/apidoc.html)
 
 ![npmPackageListing](https://npmdoc.github.io/node-npmdoc-grunt-browserify/build/screenCapture.npmPackageListing.svg)
 
