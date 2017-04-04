@@ -102,7 +102,7 @@
 <tspan x="10" y="1594">  │ │ ├── array-reduce@0.0.0 </tspan>
 <tspan x="10" y="1610">  │ │ └── jsonify@0.0.0 </tspan>
 <tspan x="10" y="1626">  │ ├── stream-browserify@2.0.1 </tspan>
-<tspan x="10" y="1642">  │ ├─┬ stream-http@2.6.3 </tspan>
+<tspan x="10" y="1642">  │ ├─┬ stream-http@2.7.0 </tspan>
 <tspan x="10" y="1658">  │ │ ├── builtin-status-codes@3.0.0 </tspan>
 <tspan x="10" y="1674">  │ │ └── to-arraybuffer@1.0.1 </tspan>
 <tspan x="10" y="1690">  │ ├── string_decoder@0.10.31 </tspan>
