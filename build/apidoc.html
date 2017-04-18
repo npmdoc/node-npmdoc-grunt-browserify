@@ -63,6 +63,15 @@
 
         <li>
 
+            <a class="apidocElementLiA" href="#apidoc.element.grunt-browserify.grunt-browserify">
+            function <span class="apidocSignatureSpan"></span>grunt-browserify
+            <span class="apidocSignatureSpan">(grunt)</span>
+            </a>
+
+        </li>
+
+        <li>
+
             <a class="apidocElementLiA" href="#apidoc.element.grunt-browserify.runTask">
             function <span class="apidocSignatureSpan">grunt-browserify.</span>runTask
             <span class="apidocSignatureSpan">(grunt, options, file, next)</span>
@@ -144,6 +153,31 @@
 
 <div class="apidocSectionDiv">
 <h1><a href="#apidoc.module.grunt-browserify" id="apidoc.module.grunt-browserify">module grunt-browserify</a></h1>
+
+
+    <h2>
+        <a href="#apidoc.element.grunt-browserify.grunt-browserify" id="apidoc.element.grunt-browserify.grunt-browserify">
+        function <span class="apidocSignatureSpan"></span>grunt-browserify
+        <span class="apidocSignatureSpan">(grunt)</span>
+        </a>
+    </h2>
+    <ul>
+    <li>description and source-code<pre class="apidocCodePre">function Task(grunt) {
+  grunt.registerMultiTask(&#x27;browserify&#x27;, &#x27;Grunt task for browserify.&#x27;, function () {
+
+    // set default options
+    var options = this.options({
+      banner: &#x27;&#x27;
+    });
+
+    async.each(this.files, function (file, next) {
+      Task.runTask(grunt, options, file, next);
+    }, this.async());
+  });
+}</pre></li>
+    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    </ul>
+
 
 
     <h2>
