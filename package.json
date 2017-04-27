@@ -1,7 +1,7 @@
 {
     "author": "kai zhu <kaizhu256@gmail.com>",
     "buildNpmdoc": "grunt-browserify",
-    "description": "#### api documentation for  [grunt-browserify (v5.0.0)](https://github.com/jmreidy/grunt-browserify)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-browserify.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-browserify) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-browserify.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-browserify)",
+    "description": "#### basic api documentation for  [grunt-browserify (v5.0.0)](https://github.com/jmreidy/grunt-browserify)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-browserify.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-browserify) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-browserify.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-browserify)",
     "devDependencies": {
         "electron-lite": "kaizhu256/node-electron-lite#alpha",
         "grunt-browserify": "*",
@@ -36,5 +36,5 @@
         "start": "(set -e; export PORT=${PORT:-8080}; utility2 start test.js)",
         "test": "(set -e; export PORT=$(utility2 shServerPortRandom); utility2 test test.js)"
     },
-    "version": "0.0.3"
+    "version": "2017.4.27"
 }

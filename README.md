@@ -1,6 +1,6 @@
 # npmdoc-grunt-browserify
 
-#### api documentation for  [grunt-browserify (v5.0.0)](https://github.com/jmreidy/grunt-browserify)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-browserify.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-browserify) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-browserify.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-browserify)
+#### basic api documentation for  [grunt-browserify (v5.0.0)](https://github.com/jmreidy/grunt-browserify)  [![npm package](https://img.shields.io/npm/v/npmdoc-grunt-browserify.svg?style=flat-square)](https://www.npmjs.org/package/npmdoc-grunt-browserify) [![travis-ci.org build-status](https://api.travis-ci.org/npmdoc/node-npmdoc-grunt-browserify.svg)](https://travis-ci.org/npmdoc/node-npmdoc-grunt-browserify)
 
 #### Grunt task for node-browserify
 
@@ -92,7 +92,8 @@
     "scripts": {
         "test": "mocha -R spec --timeout 5000"
     },
-    "version": "5.0.0"
+    "version": "5.0.0",
+    "bin": {}
 }
 ```
 
