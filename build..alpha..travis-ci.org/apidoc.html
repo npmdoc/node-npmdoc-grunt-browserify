@@ -199,7 +199,23 @@
   });
   runner.run(files, file.dest, options, next);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+
+  // set default options
+  var options = this.options({
+    banner: &#x27;&#x27;
+  });
+
+  async.each(this.files, function (file, next) {
+    Task.<span class="apidocCodeKeywordSpan">runTask</span>(grunt, options, file, next);
+  }, this.async());
+});
+}
+
+Task.runTask = function (grunt, options, file, next) {
+var runner = new Runner({
+  writer: grunt.file,
+...</pre></li>
     </ul>
 
 
@@ -478,7 +494,17 @@ if (options.watch) {
 
   doBundle(b, options, bundleComplete);
 }</pre></li>
-    <li>example usage<pre class="apidocCodePre">n/a</pre></li>
+    <li>example usage<pre class="apidocCodePre">...
+    logger: grunt,
+    browserify: browserify,
+    watchify: watchify
+  });
+  var files = grunt.file.expand({filter: &#x27;isFile&#x27;}, file.src).map(function (f) {
+    return path.resolve(f);
+  });
+  runner.<span class="apidocCodeKeywordSpan">run</span>(files, file.dest, options, next);
+};
+...</pre></li>
     </ul>
 
 
